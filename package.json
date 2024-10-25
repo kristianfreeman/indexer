@@ -20,6 +20,8 @@
 		}
 	},
 	"dependencies": {
-		"googleapis": "^144.0.0"
+		"cheerio": "^1.0.0",
+		"googleapis": "^144.0.0",
+		"hono": "^4.6.6"
 	}
 }

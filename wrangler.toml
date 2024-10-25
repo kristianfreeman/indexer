@@ -8,12 +8,15 @@ compatibility_flags = ["nodejs_compat"]
 enabled = true
 head_sampling_rate = 1 # optional. default = 1.
 
+[triggers]
+crons = ["*/10 * * * *"] # Run every 10 min
+
 [[workflows]]
 name = "indexer"
 binding = "INDEXING_WORKFLOW"
 class_name = "IndexingWorkflow"
 
 [[d1_databases]]
-binding = "DB"
+binding = "DATABASE"
 database_name = "index_db"
 database_id = "401697db-2b00-4d5e-a77d-5d6225bf9b98"
