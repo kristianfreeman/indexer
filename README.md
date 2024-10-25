@@ -8,6 +8,9 @@ By providing a list of sitemaps, this workflow will crawl your site and make ind
 
 This project is still very WIP, but some initial docs are below.
 
+> [!WARNING]  
+> This repo is only provided as a reference. [Indexing via this method may lead to penalties from Google!](https://www.searchenginejournal.com/google-adds-spam-warning-to-indexing-api-documentation/526839/)
+
 ## Usage
 
 After setup, you can make requests to check various aspects of the workflow:
