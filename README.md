@@ -25,6 +25,8 @@ By default, the workflow will run every 10 minutes using a [scheduled trigger](h
 
 The workflow will try and index 100 URLs at a time. This means that it will index up to 14,440 URLs each day. This should be enough to cover most sites, but you can adjust the number of URLs or other parameters in the codebase if you have more URLs.
 
+Currently, the workflow will only index URLs a single time, when they are first discovered. There is no mechanism currently for re-indexing URLs. You can manually re-index a URL by updating the `last_index_submitted` column in the database.
+
 ## Setup
 
 ### Google Cloud

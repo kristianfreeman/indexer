@@ -100,20 +100,15 @@ export class IndexingWorkflow extends WorkflowEntrypoint<Env> {
     }))
 
     const urls = await step.do('get 100 URLs to index', async () => {
-      // Get 100 URLs that haven't been indexed in the last 24 hours
-      // Since this runs every 10 min, it will work through
-      // 100 * (1440 min / 10 min) = 14440 URLs
-      // You can tweak these parameters if you have more URLs
       const query = `
         select * from urls
         order by updated_at desc
         limit 100
-        where last_index_submitted < ?
+        where last_index_submitted is null
       `
 
       const resp = await this.env.DATABASE
         .prepare(query)
-        .bind(oneDayAgo.toISOString())
         .all()
 
       console.log(`Found ${resp.results.length} URLs to index`);
