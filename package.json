@@ -18,5 +18,8 @@
 		"overrides": {
 			"esbuild": "0.21.4"
 		}
+	},
+	"dependencies": {
+		"googleapis": "^144.0.0"
 	}
 }
