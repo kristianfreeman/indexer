@@ -1,15 +1,13 @@
 # indexer
 
-This codebase allows you to self-host an indexing workflow for your web properties.
+This codebase is a proof-of-concept of building large-scale workflows with [Cloudflare Workflows](https://developers.cloudflare.com/workflows/). It's built with [Cloudflare Workers](https://workers.cloudflare.com/), [Cloudflare D1](https://developers.cloudflare.com/d1/), and [Hono](https://honojs.dev/).
 
-It uses [Cloudflare Workflows](https://developers.cloudflare.com/workflows/) to run the indexing process, and is built on [Cloudflare Workers](https://workers.cloudflare.com/), [Cloudflare D1](https://developers.cloudflare.com/d1/), and [Hono](https://honojs.dev/).
-
-By providing a list of sitemaps, this workflow will crawl your site and make indexing requests to Google Search Console.
-
-This project is still very WIP, but some initial docs are below.
+By providing a list of sitemaps, this workflow will crawl your site and make indexing requests to Google Search Console (_see the disclaimer below before trying this on your production sites_).
 
 > [!WARNING]  
 > This repo is only provided as a reference. [Indexing via this method may lead to penalties from Google!](https://www.searchenginejournal.com/google-adds-spam-warning-to-indexing-api-documentation/526839/)
+
+This project is a proof-of-concept showing workflows. Some docs are available regarding running the project below. That being said, I don't recommend that you run this in production due to Google cracking down on this process.
 
 ## Usage
 
